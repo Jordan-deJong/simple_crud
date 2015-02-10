@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = SimpleCrud::VERSION
   s.authors     = ["Jordan-deJong"]
   s.email       = ["jordan.dejong@me.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of SimpleCrud."
-  s.description = "TODO: Description of SimpleCrud."
+  s.homepage    = "https://github.com/Jordan-deJong/simple_crud.git"
+  s.summary     = "Clean up that CRUD!"
+  s.description = "Create, Update and Delete all in one line."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
