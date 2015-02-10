@@ -1,0 +1,2 @@
+module SimpleCrud
+end
