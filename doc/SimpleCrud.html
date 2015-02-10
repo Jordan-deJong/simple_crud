@@ -172,7 +172,7 @@
           
           <div class="method-source-code" id="create_-source">
             <pre><span class="ruby-comment"># File lib/simple_crud.rb, line 7</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_</span>(<span class="ruby-identifier">instance</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">r</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_</span>(<span class="ruby-identifier">instance</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">r</span>) <span class="ruby-comment"># Save the instance, Redirect_to if save successful, #render template if not successful</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">instance</span>.<span class="ruby-identifier">save</span>
     <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">path</span>, <span class="ruby-identifier">notice</span><span class="ruby-operator">:</span> <span class="ruby-identifier">class_name</span>(<span class="ruby-identifier">instance</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot; created.&quot;</span>
   <span class="ruby-keyword">else</span>
@@ -209,7 +209,7 @@
           
           <div class="method-source-code" id="destroy_-source">
             <pre><span class="ruby-comment"># File lib/simple_crud.rb, line 23</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy_</span>(<span class="ruby-identifier">instance</span>, <span class="ruby-identifier">path</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy_</span>(<span class="ruby-identifier">instance</span>, <span class="ruby-identifier">path</span>) <span class="ruby-comment"># Delete instance, Redirect_to after delete</span>
   <span class="ruby-identifier">instance</span>.<span class="ruby-identifier">destroy</span>
   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">path</span>, <span class="ruby-identifier">notice</span><span class="ruby-operator">:</span> <span class="ruby-identifier">class_name</span>(<span class="ruby-identifier">instance</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot; deleted.&quot;</span>
 <span class="ruby-keyword">end</span></pre>
@@ -243,7 +243,7 @@
           
           <div class="method-source-code" id="update_-source">
             <pre><span class="ruby-comment"># File lib/simple_crud.rb, line 15</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_</span>(<span class="ruby-identifier">instance</span>, <span class="ruby-identifier">strong_params</span>, <span class="ruby-identifier">path</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_</span>(<span class="ruby-identifier">instance</span>, <span class="ruby-identifier">strong_params</span>, <span class="ruby-identifier">path</span>) <span class="ruby-comment"># Update the instance, Redirect_to if successful, # Always renders edit</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">instance</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">strong_params</span>)
     <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">path</span>, <span class="ruby-identifier">notice</span><span class="ruby-operator">:</span> <span class="ruby-identifier">class_name</span>(<span class="ruby-identifier">instance</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot; updated.&quot;</span>
   <span class="ruby-keyword">else</span>

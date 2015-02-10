@@ -118,7 +118,7 @@
 
 <h1 id="label-simple_crud">simple_crud<span><a href="#label-simple_crud">&para;</a> <a href="#top">&uarr;</a></span></h1>
 
-<p>Intro</p>
+<p>Clean up those controllers with som simple crud!</p>
 
 <h2 id="label-Download">Download<span><a href="#label-Download">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
@@ -155,17 +155,17 @@ support.</p>
 
 <pre class="ruby">
   <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
-    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">user_params</span>)
-    <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">company_id</span> = <span class="ruby-identifier">session</span>[:<span class="ruby-identifier">company_id</span>]
-    <span class="ruby-identifier">create_</span> <span class="ruby-ivar">@user</span>, <span class="ruby-identifier">users_path</span>, :<span class="ruby-identifier">index</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">user_params</span>) <span class="ruby-comment"># Create a new class</span>
+    <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">company_id</span> = <span class="ruby-identifier">session</span>[:<span class="ruby-identifier">company_id</span>] <span class="ruby-comment"># Add any other attributes</span>
+    <span class="ruby-identifier">create_</span> <span class="ruby-ivar">@user</span>, <span class="ruby-identifier">users_path</span>, :<span class="ruby-identifier">new</span> <span class="ruby-comment"># Save the instance, Redirect_to if save successful, #render template if not successful</span>
   <span class="ruby-keyword">end</span>
 
   <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
-    <span class="ruby-identifier">update_</span> <span class="ruby-ivar">@user</span>, <span class="ruby-identifier">user_params</span>, <span class="ruby-identifier">users_path</span>
+    <span class="ruby-identifier">update_</span> <span class="ruby-ivar">@user</span>, <span class="ruby-identifier">user_params</span>, <span class="ruby-identifier">users_path</span> <span class="ruby-comment"># Update the instance, Redirect_to if successful, # Always renders edit</span>
   <span class="ruby-keyword">end</span>
 
   <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
-    <span class="ruby-identifier">destroy_</span> <span class="ruby-ivar">@user</span>, <span class="ruby-identifier">users_path</span>
+    <span class="ruby-identifier">destroy_</span> <span class="ruby-ivar">@user</span>, <span class="ruby-identifier">users_path</span> <span class="ruby-comment"># Delete instance, Redirect_to after delete</span>
   <span class="ruby-keyword">end</span>
 </pre>
 

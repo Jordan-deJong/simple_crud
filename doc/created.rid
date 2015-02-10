@@ -1,14 +1,14 @@
-Wed, 11 Feb 2015 10:14:19 +1100
+Wed, 11 Feb 2015 10:34:54 +1100
 ./Gemfile	Tue, 10 Feb 2015 16:42:47 +1100
 ./Gemfile.lock	Tue, 10 Feb 2015 16:43:03 +1100
 ./lib/simple_crud/version.rb	Tue, 10 Feb 2015 16:42:47 +1100
-./lib/simple_crud.rb	Tue, 10 Feb 2015 17:14:58 +1100
+./lib/simple_crud.rb	Wed, 11 Feb 2015 10:34:41 +1100
 ./lib/tasks/simple_crud_tasks.rake	Tue, 10 Feb 2015 16:42:47 +1100
 ./MIT-LICENSE	Tue, 10 Feb 2015 16:42:47 +1100
 ./Rakefile	Tue, 10 Feb 2015 16:42:47 +1100
-./README.md	Wed, 11 Feb 2015 09:38:46 +1100
-./simple_crud-0.0.1.gem	Wed, 11 Feb 2015 10:12:15 +1100
-./simple_crud.gemspec	Wed, 11 Feb 2015 09:43:27 +1100
+./README.md	Wed, 11 Feb 2015 10:33:16 +1100
+./simple_crud-0.0.1.gem	Wed, 11 Feb 2015 10:18:38 +1100
+./simple_crud.gemspec	Wed, 11 Feb 2015 10:17:59 +1100
 ./test/dummy/app/assets/javascripts/application.js	Tue, 10 Feb 2015 16:42:47 +1100
 ./test/dummy/app/assets/stylesheets/application.css	Tue, 10 Feb 2015 16:42:47 +1100
 ./test/dummy/app/controllers/application_controller.rb	Tue, 10 Feb 2015 16:42:47 +1100
