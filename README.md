@@ -1,6 +1,6 @@
 # simple_crud
 
-Clean up those controllers with som simple crud!
+Clean up those controllers with some simple CRUD!
 
 ## Download
 
