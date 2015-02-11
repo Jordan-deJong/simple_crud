@@ -58,7 +58,7 @@ Load the gem in the appropriate environments using Rails' 3.2+ gem support.
 
 ## Version
 
-0.0.1
+0.0.2
 
 ## Copyright
 
