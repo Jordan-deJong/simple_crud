@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/simple_crud.svg)](http://badge.fury.io/rb/simple_crud)
+
 # simple_crud
 
 Clean up those controllers with some simple CRUD!
