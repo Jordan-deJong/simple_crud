@@ -78,11 +78,15 @@
   
     <li><a href="../../../test/dummy/app/assets/javascripts/application_js.html">application.js</a>
   
+    <li><a href="../../../test/dummy/app/assets/javascripts/users_js.html">users.js</a>
+  
     <li><a href="../../../test/dummy/app/assets/stylesheets/application_css.html">application.css</a>
+  
+    <li><a href="../../../test/dummy/app/assets/stylesheets/users_css.html">users.css</a>
   
     <li><a href="../../../test/dummy/config_ru.html">config.ru</a>
   
-    <li><a href="../../../test/dummy/db/test_sqlite3.html">test.sqlite3</a>
+    <li><a href="../../../test/dummy/log/development_log.html">development.log</a>
   
     <li><a href="../../../test/dummy/log/test_log.html">test.log</a>
   
@@ -115,7 +119,806 @@
 <p>SimpleCrudTest: test_truth</p>
 <hr>
 
-<pre>[1m[35m (0.1ms)[0m  rollback transaction</pre>
+<pre>[1m[35m (0.1ms)[0m  rollback transaction
+[1m[36m (1.2ms)[0m  [1mCREATE TABLE &quot;users&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;name&quot; varchar, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL) [0m
+[1m[35m (1.1ms)[0m  CREATE TABLE &quot;schema_migrations&quot; (&quot;version&quot; varchar NOT NULL) 
+[1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+[1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX &quot;unique_schema_migrations&quot; ON &quot;schema_migrations&quot; (&quot;version&quot;)
+[1m[36m (0.1ms)[0m  [1mSELECT version FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.9ms)[0m  INSERT INTO &quot;schema_migrations&quot; (version) VALUES (&#39;20150211054043&#39;)
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>SimpleCrudTest: test_truth</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.0ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_new</p>
+<hr>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-new">UsersController#new</a>
+as HTML</p>
+
+<pre>Rendered users/new.html.erb within layouts/application (2.2ms)</pre>
+
+<p>Completed 200 OK in 37ms (Views: 36.6ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_edit</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_create_user</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM &quot;users&quot;[0m</pre>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-create">UsersController#create</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;user&quot;=&gt;{&quot;name&quot;=&gt;&quot;Joe Smith&quot;}}
+[1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (0.5ms)[0m  [1mINSERT INTO &quot;users&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?)[0m  [[&quot;name&quot;, &quot;Joe Smith&quot;], [&quot;created_at&quot;, &quot;2015-02-11 06:09:42.880781&quot;], [&quot;updated_at&quot;, &quot;2015-02-11 06:09:42.880781&quot;]]
+[1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Redirected to <a href="http://test.host/users">test.host/users</a>
+Completed 302 Found in 13ms (ActiveRecord: 0.7ms)</p>
+
+<pre>[1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM &quot;users&quot;[0m
+[1m[35m (0.5ms)[0m  rollback transaction
+[1m[36m (0.1ms)[0m  [1mbegin transaction[0m</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_index</p>
+<hr>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-index">UsersController#index</a>
+as HTML</p>
+
+<pre>Rendered users/index.html.erb within layouts/application (0.4ms)</pre>
+
+<p>Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.0ms)[0m  rollback transaction
+[1m[36m (0.1ms)[0m  [1mbegin transaction[0m</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_show</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  rollback transaction
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>SimpleCrudTest: test_truth</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.0ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_edit</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_destroy_post</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.0ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_update_user</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_show</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_create_user</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_new</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_update_user</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_destroy_post</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.0ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_edit</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_show</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (7.2ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_create_user</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_new</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>SimpleCrudTest: test_truth</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>SimpleCrudTest: test_truth</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_destroy_post</p>
+<hr>
+
+<pre>[1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_show</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_edit</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.0ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_create_user</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_update_user</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_new</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.0ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_create_user</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_show</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_destroy_post</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_edit</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.2ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_new</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_update_user</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.0ms)[0m  begin transaction</pre>
+<hr>
+
+<p>SimpleCrudTest: test_truth</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_show</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_destroy_post</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+[1m[35mSQL (0.6ms)[0m  INSERT INTO &quot;users&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?)  [[&quot;name&quot;, &quot;Joe Smith&quot;], [&quot;created_at&quot;, &quot;2015-02-11 06:31:25.077078&quot;], [&quot;updated_at&quot;, &quot;2015-02-11 06:31:25.077078&quot;]]
+[1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM &quot;users&quot;</pre>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-destroy">UsersController#destroy</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;true}
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = ? LIMIT 1[0m  [[&quot;id&quot;, 1]]
+[1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (1.1ms)[0m  [1mDELETE FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = ?[0m  [[&quot;id&quot;, 1]]
+[1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Redirected to <a href="http://test.host/users">test.host/users</a>
+Completed 302 Found in 14ms (ActiveRecord: 1.4ms)</p>
+
+<pre>[1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM &quot;users&quot;[0m
+[1m[35m (0.7ms)[0m  rollback transaction
+[1m[36m (0.1ms)[0m  [1mbegin transaction[0m</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_create_user</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM &quot;users&quot;</pre>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-create">UsersController#create</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;user&quot;=&gt;{&quot;name&quot;=&gt;&quot;Joe Smith&quot;}}
+[1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+[1m[35mSQL (0.2ms)[0m  INSERT INTO &quot;users&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?)  [[&quot;name&quot;, &quot;Joe Smith&quot;], [&quot;created_at&quot;, &quot;2015-02-11 06:31:25.105042&quot;], [&quot;updated_at&quot;, &quot;2015-02-11 06:31:25.105042&quot;]]
+[1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m</pre>
+
+<p>Redirected to <a href="http://test.host/users">test.host/users</a>
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)</p>
+
+<pre>[1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM &quot;users&quot;
+[1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_edit</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_new</p>
+<hr>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-new">UsersController#new</a>
+as HTML</p>
+
+<pre>Rendered users/new.html.erb within layouts/application (2.2ms)</pre>
+
+<p>Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_index</p>
+<hr>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-index">UsersController#index</a>
+as HTML</p>
+
+<pre>Rendered users/index.html.erb within layouts/application (0.5ms)</pre>
+
+<p>Completed 200 OK in 2ms (Views: 2.3ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_update_user</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+[1m[35mSQL (0.3ms)[0m  INSERT INTO &quot;users&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?)  [[&quot;name&quot;, &quot;Joe Smith&quot;], [&quot;created_at&quot;, &quot;2015-02-11 06:31:25.147623&quot;], [&quot;updated_at&quot;, &quot;2015-02-11 06:31:25.147623&quot;]]
+[1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m</pre>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-update">UsersController#update</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;user&quot;=&gt;{&quot;name&quot;=&gt;&quot;Smith Joe&quot;}, &quot;id&quot;=&gt;true}
+[1m[35mUser Load (0.0ms)[0m  SELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = ? LIMIT 1  [[&quot;id&quot;, 1]]
+[1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+[1m[35mSQL (0.4ms)[0m  UPDATE &quot;users&quot; SET &quot;name&quot; = ?, &quot;updated_at&quot; = ? WHERE &quot;users&quot;.&quot;id&quot; = ?  [[&quot;name&quot;, &quot;Smith Joe&quot;], [&quot;updated_at&quot;, &quot;2015-02-11 06:31:25.150986&quot;], [&quot;id&quot;, 1]]
+[1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m</pre>
+
+<p>Redirected to <a href="http://test.host/users">test.host/users</a>
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)</p>
+
+<pre>[1m[35m (0.7ms)[0m  rollback transaction
+[1m[36m (0.1ms)[0m  [1mbegin transaction[0m</pre>
+<hr>
+
+<p>SimpleCrudTest: test_truth</p>
+<hr>
+
+<pre>[1m[35m (0.0ms)[0m  rollback transaction
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_create_user</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM &quot;users&quot;[0m</pre>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-create">UsersController#create</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;user&quot;=&gt;{&quot;name&quot;=&gt;&quot;Joe Smith&quot;}}
+[1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (0.4ms)[0m  [1mINSERT INTO &quot;users&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?)[0m  [[&quot;name&quot;, &quot;Joe Smith&quot;], [&quot;created_at&quot;, &quot;2015-02-11 06:32:24.417537&quot;], [&quot;updated_at&quot;, &quot;2015-02-11 06:32:24.417537&quot;]]
+[1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Redirected to <a href="http://test.host/users">test.host/users</a>
+Completed 302 Found in 11ms (ActiveRecord: 0.7ms)</p>
+
+<pre>[1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM &quot;users&quot;[0m
+[1m[35m (8.8ms)[0m  rollback transaction
+[1m[36m (0.1ms)[0m  [1mbegin transaction[0m</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_show</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  rollback transaction
+[1m[36m (0.1ms)[0m  [1mbegin transaction[0m</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_edit</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  rollback transaction
+[1m[36m (0.1ms)[0m  [1mbegin transaction[0m</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_new</p>
+<hr>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-new">UsersController#new</a>
+as HTML</p>
+
+<pre>Rendered users/new.html.erb within layouts/application (1.0ms)</pre>
+
+<p>Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.1ms)[0m  rollback transaction
+[1m[36m (0.1ms)[0m  [1mbegin transaction[0m</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_index</p>
+<hr>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-index">UsersController#index</a>
+as HTML</p>
+
+<pre>Rendered users/index.html.erb within layouts/application (0.4ms)</pre>
+
+<p>Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.0ms)[0m  rollback transaction
+[1m[36m (0.1ms)[0m  [1mbegin transaction[0m</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_update_user</p>
+<hr>
+
+<pre>[1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (0.2ms)[0m  [1mINSERT INTO &quot;users&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?)[0m  [[&quot;name&quot;, &quot;Joe Smith&quot;], [&quot;created_at&quot;, &quot;2015-02-11 06:32:24.457816&quot;], [&quot;updated_at&quot;, &quot;2015-02-11 06:32:24.457816&quot;]]
+[1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-update">UsersController#update</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;user&quot;=&gt;{&quot;name&quot;=&gt;&quot;Smith Joe&quot;}, &quot;id&quot;=&gt;true}
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = ? LIMIT 1[0m  [[&quot;id&quot;, 1]]
+[1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (1.1ms)[0m  [1mUPDATE &quot;users&quot; SET &quot;name&quot; = ?, &quot;updated_at&quot; = ? WHERE &quot;users&quot;.&quot;id&quot; = ?[0m  [[&quot;name&quot;, &quot;Smith Joe&quot;], [&quot;updated_at&quot;, &quot;2015-02-11 06:32:24.465123&quot;], [&quot;id&quot;, 1]]
+[1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Redirected to <a href="http://test.host/users">test.host/users</a>
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms)</p>
+
+<pre>[1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_destroy_post</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+[1m[35mSQL (0.3ms)[0m  INSERT INTO &quot;users&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?)  [[&quot;name&quot;, &quot;Joe Smith&quot;], [&quot;created_at&quot;, &quot;2015-02-11 06:32:24.470730&quot;], [&quot;updated_at&quot;, &quot;2015-02-11 06:32:24.470730&quot;]]
+[1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM &quot;users&quot;</pre>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-destroy">UsersController#destroy</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;true}
+[1m[36mUser Load (0.1ms)[0m  [1mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = ? LIMIT 1[0m  [[&quot;id&quot;, 1]]
+[1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (0.4ms)[0m  [1mDELETE FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = ?[0m  [[&quot;id&quot;, 1]]
+[1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Redirected to <a href="http://test.host/users">test.host/users</a>
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)</p>
+
+<pre>[1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM &quot;users&quot;[0m
+[1m[35m (0.7ms)[0m  rollback transaction
+[1m[36m (0.0ms)[0m  [1mbegin transaction[0m</pre>
+<hr>
+
+<p>SimpleCrudTest: test_truth</p>
+<hr>
+
+<pre>[1m[35m (0.0ms)[0m  rollback transaction
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>SimpleCrudTest: test_truth</p>
+<hr>
+
+<pre>[1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_create_user</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM &quot;users&quot;[0m</pre>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-create">UsersController#create</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;user&quot;=&gt;{&quot;name&quot;=&gt;&quot;Joe Smith&quot;}}
+[1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (0.3ms)[0m  [1mINSERT INTO &quot;users&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?)[0m  [[&quot;name&quot;, &quot;Joe Smith&quot;], [&quot;created_at&quot;, &quot;2015-02-11 06:44:52.310840&quot;], [&quot;updated_at&quot;, &quot;2015-02-11 06:44:52.310840&quot;]]
+[1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Redirected to <a href="http://test.host/users">test.host/users</a>
+Completed 302 Found in 11ms (ActiveRecord: 0.8ms)</p>
+
+<pre>[1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM &quot;users&quot;[0m
+[1m[35m (8.7ms)[0m  rollback transaction
+[1m[36m (0.1ms)[0m  [1mbegin transaction[0m</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_show</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  rollback transaction
+[1m[36m (0.1ms)[0m  [1mbegin transaction[0m</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_new</p>
+<hr>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-new">UsersController#new</a>
+as HTML</p>
+
+<pre>Rendered users/new.html.erb within layouts/application (1.7ms)</pre>
+
+<p>Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.1ms)[0m  rollback transaction
+[1m[36m (0.1ms)[0m  [1mbegin transaction[0m</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_update_user</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (0.3ms)[0m  [1mINSERT INTO &quot;users&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?)[0m  [[&quot;name&quot;, &quot;Joe Smith&quot;], [&quot;created_at&quot;, &quot;2015-02-11 06:44:52.351200&quot;], [&quot;updated_at&quot;, &quot;2015-02-11 06:44:52.351200&quot;]]
+[1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-update">UsersController#update</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;user&quot;=&gt;{&quot;name&quot;=&gt;&quot;Smith Joe&quot;}, &quot;id&quot;=&gt;true}
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = ? LIMIT 1[0m  [[&quot;id&quot;, 1]]
+[1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (1.2ms)[0m  [1mUPDATE &quot;users&quot; SET &quot;name&quot; = ?, &quot;updated_at&quot; = ? WHERE &quot;users&quot;.&quot;id&quot; = ?[0m  [[&quot;name&quot;, &quot;Smith Joe&quot;], [&quot;updated_at&quot;, &quot;2015-02-11 06:44:52.359373&quot;], [&quot;id&quot;, 1]]
+[1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Redirected to <a href="http://test.host/users">test.host/users</a>
+Completed 302 Found in 9ms (ActiveRecord: 1.5ms)</p>
+
+<pre>[1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_index</p>
+<hr>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-index">UsersController#index</a>
+as HTML</p>
+
+<pre>Rendered users/index.html.erb within layouts/application (0.4ms)</pre>
+
+<p>Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_destroy_post</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+[1m[35mSQL (0.3ms)[0m  INSERT INTO &quot;users&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?)  [[&quot;name&quot;, &quot;Joe Smith&quot;], [&quot;created_at&quot;, &quot;2015-02-11 06:44:52.369138&quot;], [&quot;updated_at&quot;, &quot;2015-02-11 06:44:52.369138&quot;]]
+[1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM &quot;users&quot;</pre>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-destroy">UsersController#destroy</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;true}
+[1m[36mUser Load (0.0ms)[0m  [1mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = ? LIMIT 1[0m  [[&quot;id&quot;, 1]]
+[1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (0.3ms)[0m  [1mDELETE FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = ?[0m  [[&quot;id&quot;, 1]]
+[1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Redirected to <a href="http://test.host/users">test.host/users</a>
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)</p>
+
+<pre>[1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM &quot;users&quot;[0m
+[1m[35m (0.6ms)[0m  rollback transaction
+[1m[36m (0.1ms)[0m  [1mbegin transaction[0m</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_edit</p>
+<hr>
+
+<pre>[1m[35m (0.0ms)[0m  rollback transaction
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.2ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_update_user</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+[1m[35mSQL (0.3ms)[0m  INSERT INTO &quot;users&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?)  [[&quot;name&quot;, &quot;Joe Smith&quot;], [&quot;created_at&quot;, &quot;2015-02-11 06:46:58.745957&quot;], [&quot;updated_at&quot;, &quot;2015-02-11 06:46:58.745957&quot;]]
+[1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m</pre>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-update">UsersController#update</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;user&quot;=&gt;{&quot;name&quot;=&gt;&quot;Smith Joe&quot;}, &quot;id&quot;=&gt;true}
+[1m[35mUser Load (0.2ms)[0m  SELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = ? LIMIT 1  [[&quot;id&quot;, 1]]
+[1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+[1m[35mSQL (1.3ms)[0m  UPDATE &quot;users&quot; SET &quot;name&quot; = ?, &quot;updated_at&quot; = ? WHERE &quot;users&quot;.&quot;id&quot; = ?  [[&quot;name&quot;, &quot;Smith Joe&quot;], [&quot;updated_at&quot;, &quot;2015-02-11 06:46:58.757047&quot;], [&quot;id&quot;, 1]]
+[1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m</pre>
+
+<p>Redirected to <a href="http://test.host/users">test.host/users</a>
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms)</p>
+
+<pre>[1m[35m (8.9ms)[0m  rollback transaction
+[1m[36m (0.2ms)[0m  [1mbegin transaction[0m</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_destroy_post</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (0.3ms)[0m  [1mINSERT INTO &quot;users&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?)[0m  [[&quot;name&quot;, &quot;Joe Smith&quot;], [&quot;created_at&quot;, &quot;2015-02-11 06:46:58.771352&quot;], [&quot;updated_at&quot;, &quot;2015-02-11 06:46:58.771352&quot;]]
+[1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+[1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM &quot;users&quot;[0m</pre>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-destroy">UsersController#destroy</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;true}
+[1m[35mUser Load (0.1ms)[0m  SELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = ? LIMIT 1  [[&quot;id&quot;, 1]]
+[1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+[1m[35mSQL (0.4ms)[0m  DELETE FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = ?  [[&quot;id&quot;, 1]]
+[1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m</pre>
+
+<p>Redirected to <a href="http://test.host/users">test.host/users</a>
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)</p>
+
+<pre>[1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM &quot;users&quot;
+[1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_index</p>
+<hr>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-index">UsersController#index</a>
+as HTML</p>
+
+<pre>Rendered users/index.html.erb within layouts/application (1.6ms)</pre>
+
+<p>Completed 200 OK in 19ms (Views: 19.3ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_edit</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[1m[35m (0.1ms)[0m  begin transaction</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_create_user</p>
+<hr>
+
+<pre>[1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM &quot;users&quot;[0m</pre>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-create">UsersController#create</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;user&quot;=&gt;{&quot;name&quot;=&gt;&quot;Joe Smith&quot;}}
+[1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (0.3ms)[0m  [1mINSERT INTO &quot;users&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?)[0m  [[&quot;name&quot;, &quot;Joe Smith&quot;], [&quot;created_at&quot;, &quot;2015-02-11 06:46:58.803970&quot;], [&quot;updated_at&quot;, &quot;2015-02-11 06:46:58.803970&quot;]]
+[1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Redirected to <a href="http://test.host/users">test.host/users</a>
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)</p>
+
+<pre>[1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM &quot;users&quot;[0m
+[1m[35m (0.5ms)[0m  rollback transaction
+[1m[36m (0.1ms)[0m  [1mbegin transaction[0m</pre>
+<hr>
+
+<p>UsersControllerTest: test_should_get_new</p>
+<hr>
+
+<p>Processing by <a
+href="../../../UsersController.html#method-i-new">UsersController#new</a>
+as HTML</p>
+
+<pre>Rendered users/new.html.erb within layouts/application (0.4ms)</pre>
+
+<p>Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.0ms)[0m  rollback transaction
+[1m[36m (0.0ms)[0m  [1mbegin transaction[0m</pre>
+<hr>
+
+<p>SimpleCrudTest: test_truth</p>
+<hr>
+
+<pre>[1m[35m (0.0ms)[0m  rollback transaction</pre>
 </main>
 
 

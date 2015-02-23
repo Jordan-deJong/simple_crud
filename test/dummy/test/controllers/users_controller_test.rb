@@ -23,11 +23,6 @@ class UsersControllerTest < ActionController::TestCase
     assert_redirected_to users_path
   end
 
-  test "should get show" do
-    get :show
-    assert_response :success
-  end
-
   test "should update user" do
     user = User.new(name: "Joe Smith").save
     patch :update, id: user, user: { name: "Smith Joe" }

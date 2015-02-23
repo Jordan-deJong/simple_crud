@@ -173,7 +173,7 @@
           <div class="method-source-code" id="create_-source">
             <pre><span class="ruby-comment"># File lib/simple_crud.rb, line 7</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create_</span>(<span class="ruby-identifier">instance</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">r</span>) <span class="ruby-comment"># Save the instance, Redirect_to if save successful, #render template if not successful</span>
-  <span class="ruby-keyword">if</span> <span class="ruby-identifier">instance</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">instance</span>.<span class="ruby-identifier">create</span>
     <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">path</span>, <span class="ruby-identifier">notice</span><span class="ruby-operator">:</span> <span class="ruby-identifier">class_name</span>(<span class="ruby-identifier">instance</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot; created.&quot;</span>
   <span class="ruby-keyword">else</span>
     <span class="ruby-identifier">render</span> <span class="ruby-identifier">r</span>
