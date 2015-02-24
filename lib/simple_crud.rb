@@ -5,7 +5,7 @@ module SimpleCrud
   end
 
   def create_(instance, path, r) # Save the instance, Redirect_to if save successful, #render template if not successful
-    if instance.create
+    if instance.save
       redirect_to path, notice: class_name(instance) + " created."
     else
       render r
